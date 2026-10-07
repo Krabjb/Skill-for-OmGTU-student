@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=78"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "omgtu-student"
+version = "0.1.0"
+description = "Local, session-protected OmGTU contact-work tools for Codex"
+requires-python = ">=3.11"
+dependencies = [
+  "httpx>=0.28,<1",
+  "beautifulsoup4>=4.13,<5",
+  "playwright>=1.55,<2",
+  "mcp>=1.20,<2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "ruff>=0.12,<1", "PyYAML>=6,<7"]
+
+[project.scripts]
+omgtu = "omgtu_student.cli:main"
+omgtu-mcp = "omgtu_student.server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 110
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

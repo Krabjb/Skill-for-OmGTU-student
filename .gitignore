@@ -1,0 +1,23 @@
+# Authentication and downloaded university material stay outside this repository.
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+dist/
+build/
+.env
+.env.*
+!.env.example
+*storage-state*.json
+*session*.json
+*.dpapi
+*.key
+downloads/
+materials/
+private/
+.omgtu/
+omgtu-manifest.json
+omgtu-project.json
+*.log

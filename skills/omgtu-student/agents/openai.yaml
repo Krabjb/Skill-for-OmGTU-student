@@ -1,0 +1,6 @@
+interface:
+  display_name: "ОмГТУ: задания и проекты"
+  short_description: "Материалы кабинета и проверка учебных проектов"
+  default_prompt: "Используй $omgtu-student: найди последнее домашнее задание по математике, скачай материалы и выполни его по требованиям."
+policy:
+  allow_implicit_invocation: true
